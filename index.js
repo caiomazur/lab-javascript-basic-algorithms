@@ -38,16 +38,16 @@ console.log(newHacker2);
 
 // 3.3 Depending on the lexicographic order of the strings:
 if (hacker1.localeCompare(hacker2) === -1) {
-    //console.log("The driver's name goes first.");
+    console.log("The driver's name goes first.");
 } 
 else if (hacker1.localeCompare(hacker2) === 1) {
     console.log("Yo, the navigator goes first definitely.");
 }
 else {
-    console.log("Yo, the navigator goes first definitely.");
+    console.log("What?! You both have the same name?");
 }
 
-// 4 Bonus TIme!
+// 4 Bonus Time!
 
 // Bonus 1
 // 1.1 Generate 3 paragraphs:
@@ -58,9 +58,9 @@ Aliquam ac lacinia justo, in vulputate felis. Sed a ornare neque. Vivamus a cond
 Nunc consectetur, nulla a ornare tristique, purus felis mollis libero, nec imperdiet purus mi ac ipsum. Praesent commodo molestie risus egestas finibus. Nullam eu sapien nunc. Etiam eget enim massa. Aliquam vel placerat mi. Vestibulum tincidunt velit vel ipsum laoreet semper. Vestibulum molestie tristique magna, in imperdiet eros hendrerit ac. Integer nunc dui, elementum eu eros ut, consectetur tincidunt neque. Ut nec tortor a ante lobortis gravida sed vitae diam. Morbi mattis nec lectus non sollicitudin.`;
 
 // 1.2 Word Count: 
-let count = 0;
+let count = 3; // To count for the first word in each paragraph.
 for (i = 0; i < longText.length; i++) {
-    if (longText[i] === ` `) {
+    if (longText[i] === ' ') { 
         count++;
     }
 }
@@ -81,25 +81,25 @@ let phraseToCheck = 'Amor';
 phraseToCheck = phraseToCheck.toLowerCase();
 
 let wordReversed = '';
- 
+ // Reversed Loop
 for (let i = phraseToCheck.length - 1; i >= 0; i--) {
   let ltrRev = phraseToCheck[i];
   wordReversed += ltrRev;
 }
-console.log(wordReversed);
+//console.log(wordReversed);
 
 let wordReReversed = '';
-
+// Reversed Reversed Loop
 for (let j = wordReversed.length - 1; j >= 0; j--) {
 let ltrRev = wordReversed[j];
 wordReReversed += ltrRev;
 }
-
+// Compare two strings
 if (phraseToCheck.localeCompare(wordReReversed) === 0 ) {
     console.log(`${phraseToCheck} is a palindrome! :)`)
 }
 else {
-    console.log(`Ohh sorry ${phraseToCheck} is not a palindrome!`);
+    console.log(`Ohh sorry, ${phraseToCheck} is not a palindrome!`);
 }
 
 
